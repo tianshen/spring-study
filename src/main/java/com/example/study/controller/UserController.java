@@ -13,6 +13,11 @@ public class UserController {
   @Resource
   private UserService userService;
 
+    /**
+     * 插入数据
+     * @param user
+     * @return
+     */
   @PostMapping("user/insert")
   public Response insertUser(@RequestBody User user) {
       int result = userService.insertUser(user);
